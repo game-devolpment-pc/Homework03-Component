@@ -7,7 +7,7 @@ public class Oscillator : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("how fast the object moves, in meters per second")]
-    Vector3 v = new Vector3(20,0,0);
+    Vector3 v = new Vector3(-10,0,0);
     
     //float fl =(float) (Math.Sin( 90 ));
     float ss = 0f;
