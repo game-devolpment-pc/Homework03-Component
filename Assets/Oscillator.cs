@@ -5,21 +5,18 @@ using System;
 
 public class Oscillator : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("how fast the object moves, in meters per second")]
-    Vector3 speed = new Vector3(20,0,0);
-    
-    //float fl =(float) (Math.Sin( 90 ));
-    float ss = 0f;
-        void Start()
+     private float distance = 10f;
+    [Tooltip("speed of the object")]
+    [SerializeField] private float speed = 1f;
+
+     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-       Transform t =  GetComponent<Transform>();
-        t.position +=( speed * (float)(Math.Sin((ss+=0.2f)* (Math.PI)/ 180))) * Time.deltaTime ;
+      
+        transform.position = new Vector3(Mathf.Sin(Time.time * speed) * distance, 0, 0);
     }
 }
